@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subscribe to Our Newsletter</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <div class="signup-box">
+      <div class="form-section">
+        <h1>Subscribe to Our Newsletter</h1>
+        <p class="subtitle">Get the latest internship updates, career tips, and tech insights</p>
+        <form id="newsletterForm" novalidate>
+          <input type="text" id="name" placeholder="Full Name" required />
+          <small id="nameError" class="error-msg"></small>
+
+          <input type="email" id="email" placeholder="Email Address" required />
+          <small id="emailError" class="error-msg"></small>
+
+          <button type="submit" id="subscribeBtn">Subscribe</button>
+          <p class="privacy-note">We respect your privacy. No spam ever.</p>
+        </form>
+        <p id="thankYouMessage" class="thank-you hidden">Thank you for subscribing!</p>
+      </div>
+      <div class="image-section">
+        <img src="./Rolled-Up-Newspaper_Mesa-de-trabajo-1.svg" alt="Newsletter Illustration">
+      </div>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
