@@ -8,25 +8,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main class="container">
+  <main class="container" role="main">
     <div class="signup-box">
       <div class="form-section">
         <h1>Subscribe to Our Newsletter</h1>
         <p class="subtitle">Get the latest internship updates, career tips, and tech insights</p>
         <form id="newsletterForm" novalidate>
-          <input type="text" id="name" placeholder="Full Name" required />
-          <small id="nameError" class="error-msg"></small>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Your full name" aria-required="true" />
+          <small id="nameError" class="error-msg" aria-live="polite"></small>
 
-          <input type="email" id="email" placeholder="Email Address" required />
-          <small id="emailError" class="error-msg"></small>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com" aria-required="true" />
+          <small id="emailError" class="error-msg" aria-live="polite"></small>
 
           <button type="submit" id="subscribeBtn">Subscribe</button>
-          <p class="privacy-note">We respect your privacy. No spam ever.</p>
+          <small class="privacy-note">We respect your privacy. No spam ever.</small>
         </form>
-        <p id="thankYouMessage" class="thank-you hidden">Thank you for subscribing!</p>
+
+        <div id="thankYouMessage" class="thank-you hidden">
+          <p>✅ Thank you for subscribing!</p>
+          <button id="dismissBtn">Dismiss</button>
+        </div>
       </div>
+
       <div class="image-section">
-        <img src="./Rolled-Up-Newspaper_Mesa-de-trabajo-1.svg" alt="Newsletter Illustration">
+        <img src="./Rolled-Up-Newspaper_Mesa-de-trabajo-1.svg" alt="Newsletter Illustration" />
       </div>
     </div>
   </main>

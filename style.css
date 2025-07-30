@@ -37,14 +37,23 @@ body {
   margin-bottom: 20px;
   color: #666;
 }
+form {
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
 form input {
   display: block;
   width: 100%;
   padding: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  transition: 0.3s;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 form input:focus {
   border-color: #007bff;
@@ -55,11 +64,16 @@ form input:focus {
   color: red;
   font-size: 13px;
   margin-bottom: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.error-msg.show {
+  opacity: 1;
 }
 .privacy-note {
   font-size: 12px;
   color: #888;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 button {
   width: 100%;
@@ -89,10 +103,21 @@ button:disabled {
   object-fit: cover;
 }
 .thank-you {
+  margin-top: 30px;
+  text-align: center;
+  background-color: #e6ffee;
+  border: 1px solid #b2f0c0;
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.thank-you p {
   color: green;
-  font-size: 18px;
-  margin-top: 20px;
-  animation: fadeIn 1s ease-in-out;
+  font-weight: 600;
+}
+.thank-you button {
+  margin-top: 10px;
+  background-color: #28a745;
 }
 .hidden {
   display: none;
